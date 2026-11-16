@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+html, body, #root { min-height: 100%; }
+body {
+  @apply bg-ink-950 text-white;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, #2563eb40, #0000 60%),
+    radial-gradient(800px 500px at -10% 110%, #c6ea111f, #0000 60%);
+  background-attachment: fixed;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.page {
+  @apply mx-auto w-full max-w-md px-4 pb-28;
+  padding-top: calc(var(--safe-top) + 1rem);
+}
+.card {
+  @apply rounded-[1.25rem] border border-white/5 backdrop-blur-[8px];
+  background-color: #111a44b3;
+  box-shadow: 0 1px 0 #ffffff0a inset, 0 10px 30px -15px #0009;
+}
+.card-glow {
+  border-color: #d4f22e66;
+  box-shadow: 0 0 0 1px #d6f22e59, 0 10px 40px -10px #d6f22e73;
+}
+.h-display { @apply font-display font-bold tracking-tight; }
+.muted { color: #fff9; }
+.tap { @apply min-h-12 transition-transform duration-150; }
+.tap:active { transform: scale(0.98); }
+::selection { background: #c6ea1166; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+.input {
+  @apply w-full rounded-xl border border-white/10 bg-white/5 p-3 text-base text-white;
+}
+.input::placeholder { color: #ffffff4d; }
+.input:focus { @apply border-ball-400 outline-none; }
