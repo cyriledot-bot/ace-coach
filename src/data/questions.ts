@@ -1,5 +1,6 @@
 import type { QuizCategory, QuizQuestion } from "@/lib/types";
 import { QUESTIONS_ORIGINALES } from "./questions.originales";
+import { QUESTIONS_2026_11_B } from "./questions.2026_11_b";
 
 export { QUESTIONS_ORIGINALES };
 
@@ -146,4 +147,6 @@ export const QUESTIONS_TACTIQUE_2026_11: QuizQuestion[] = [
   },
 ];
 
-export const QUESTIONS: QuizQuestion[] = [...QUESTIONS_ORIGINALES, ...QUESTIONS_TACTIQUE_2026_11];
+export { QUESTIONS_2026_11_B };
+
+export const QUESTIONS: QuizQuestion[] = [...QUESTIONS_ORIGINALES, ...QUESTIONS_TACTIQUE_2026_11, ...QUESTIONS_2026_11_B];

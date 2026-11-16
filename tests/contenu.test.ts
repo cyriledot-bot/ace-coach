@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { QUESTIONS, QUESTIONS_ORIGINALES, QUESTIONS_TACTIQUE_2026_11 } from "@/data/questions";
+import { QUESTIONS, QUESTIONS_ORIGINALES, QUESTIONS_TACTIQUE_2026_11, QUESTIONS_2026_11_B } from "@/data/questions";
 import { BADGES } from "@/data/badges";
 import { PRINCIPLES, PATTERNS, INDICATORS } from "@/data/tactique";
 import { TUTOS, TUTO_CATEGORIES } from "@/data/tutos";
@@ -35,8 +35,17 @@ describe("banque de questions", () => {
     }
   });
   it("ne met pas la bonne réponse toujours à la même place dans les ajouts", () => {
-    const positions = new Set(QUESTIONS_TACTIQUE_2026_11.map((q) => q.answer));
-    expect(positions.size).toBeGreaterThanOrEqual(3);
+    for (const lot of [QUESTIONS_TACTIQUE_2026_11, QUESTIONS_2026_11_B]) {
+      const positions = new Set(lot.map((q) => q.answer));
+      expect(positions.size).toBeGreaterThanOrEqual(3);
+    }
+  });
+  it("compte 58 questions : 22 d’origine, 9 puis 27 ajoutées le 16/11", () => {
+    expect(QUESTIONS_2026_11_B).toHaveLength(27);
+    expect(QUESTIONS).toHaveLength(58);
+    const byCat = { tactique: 0, culture: 0, reglement: 0 };
+    for (const q of QUESTIONS) byCat[q.category] += 1;
+    expect(byCat).toEqual({ tactique: 24, culture: 15, reglement: 19 });
   });
 });
 

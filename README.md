@@ -28,7 +28,9 @@ Publiée comme page unique : https://claude.ai/artifact/Y1NvVLJdj7FjCisf1PGETv
     carnet en un geste (séance physique pré-remplie) ;
   - **fiche match** : trois chiffres facultatifs (1ʳᵉˢ balles %, doubles
     fautes, fautes directes) ;
-  - 9 questions tactiques de plus au quiz (tac-08 à tac-16), 3 badges de plus.
+  - 9 questions tactiques de plus au quiz (tac-08 à tac-16), 3 badges de plus ;
+  - puis un second lot de 27 questions (8 tactique, 8 culture, 11 règlement) :
+    la banque passe de 22 à 58 questions.
 
 ## Développement
 
@@ -56,6 +58,13 @@ comme l’original), zustand, motion, recharts, lucide-react, date-fns.
   repris ; seuls les principes le sont, reformulés, avec attribution.
 
 ## Pistes notées, non engagées
+
+- **Import Ten'Up par copier-coller (16/11/2026).** `src/lib/tenup.ts` sait
+  lire un palmarès collé (dates, scores « 6/4 » ou « 6-4 », classements FFT,
+  V/D ou résultat déduit du score), tests dans `tests/tenup.test.ts`. Pas
+  d'écran dans l'appli pour l'instant, et le format réel de la page Ten'Up n'a
+  pas été vu : à brancher quand un exemple de page sera fourni. Aucune
+  connexion au compte, jamais de mot de passe.
 
 - **Montre connectée (16/11/2026).** Une montre automatise la durée, la
   fréquence cardiaque et la charge de la séance (activité Tennis Garmin, export
