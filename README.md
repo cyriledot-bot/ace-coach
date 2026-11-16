@@ -32,6 +32,11 @@ Publiée comme page unique : https://claude.ai/artifact/Y1NvVLJdj7FjCisf1PGETv
   - puis un second lot de 27 questions (8 tactique, 8 culture, 11 règlement) :
     la banque passe de 22 à 58 questions.
 
+## Pour la prochaine session
+
+`CLAUDE.md` (consignes) puis `PLAN_AMELIORATION.md` (priorités P1 à P10, avec
+le critère « c'est fait » de chacune).
+
 ## Développement
 
 ```bash
