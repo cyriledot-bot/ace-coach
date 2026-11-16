@@ -5,6 +5,7 @@ d’entraînement, fiches match, statistiques, espace coach (tactique, tutos hor
 court, conseils et exercices). Application mobile-first, hors ligne, données
 sur l’appareil (`localStorage`, clé `ace-coach:v1`).
 
+Dépôt : https://github.com/cyriledot-bot/ace-coach
 Publiée comme page unique : https://claude.ai/artifact/Y1NvVLJdj7FjCisf1PGETv
 
 ## Historique
