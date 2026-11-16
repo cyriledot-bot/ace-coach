@@ -54,3 +54,13 @@ comme l’original), zustand, motion, recharts, lucide-react, date-fns.
   charge lourde (un test l’interdit) ; une douleur qui dure se dit à un adulte.
 - Les chiffres du blog Sam Tennis (pourcentages non sourcés) ne sont pas
   repris ; seuls les principes le sont, reformulés, avec attribution.
+
+## Pistes notées, non engagées
+
+- **Montre connectée (16/11/2026).** Une montre automatise la durée, la
+  fréquence cardiaque et la charge de la séance (activité Tennis Garmin, export
+  Garmin Connect), pas les indicateurs tactiques : ceux-là demandent un appui
+  par point dans une application de score (Garmin Connect IQ, Apple Watch), et
+  les fautes directes restent une appréciation. Aucune montre ne reconnaît
+  service, coup droit ou revers de façon fiable. À reprendre quand la montre et
+  le téléphone de l'utilisateur seront connus.
